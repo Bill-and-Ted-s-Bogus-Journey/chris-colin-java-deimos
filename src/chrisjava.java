@@ -3,24 +3,9 @@ import java.util.Scanner;
 
 public class chrisjava {
 
+    //    Pod2 Week3 Exercise1 for Chris
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter a number you would like to see cubed");
-        int userNumber = scanner.nextInt();
-
-        int i = userNumber;
-
-        int cubed = i * i * i;
-        System.out.printf("Your number cubed is: %d", cubed);
-
-
-
-    }
-//    Pod2 Week3 Exercise1 for Chris
-
-    public int countEvens(int[] nums) {
+    public static int countEvens(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
@@ -30,14 +15,55 @@ public class chrisjava {
         return count;
     }
 
-    public String capital(String line) {
-        return Character.toUpperCase(line.charAt(0)) + line.substring(1);
+
+
+    public static int returnOdds(int[] x) {
+        int counter = 0;
+        int y = x.length;
+        for (int i = 0; i < y; i++)
+            if (!(x[i] % 2 == 0))
+                x[counter++] = x[i];
+        for (int i=counter; i<y; i++)
+            x[i] = 0;
+
+        return counter;
     }
 
-    public  String reverseString(String string) {
-        String string1 = "Welcome to Beginnersbook";
-        String reversed = reverseString(string1);
-        return "The reversed string is: " + reversed;
+
+    public static void main(String[] args) {
+
+        int [] nums = {6, 7, 8, 9, 10};
+        System.out.println("removeOdds() = " + returnOdds(nums));
+
+
+        int [] test = {1, 2, 3, 4, 5};
+        System.out.println("countEvens(test) = " + countEvens(test));
+        Scanner scanner = new Scanner(System.in);
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input a Sentence: ");
+        String line = in.nextLine();
+        String upper_case_line = "";
+        Scanner lineScan = new Scanner(line);
+        while(lineScan.hasNext()) {
+            String word = lineScan.next();
+            upper_case_line += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
+        }
+        System.out.println(upper_case_line.trim());
+
+//        System.out.println("Enter a number you would like to see cubed");
+//        int userNumber = scanner.nextInt();
+//
+//        int i = userNumber;
+//
+//        int cubed = i * i * i;
+//        System.out.printf("Your number cubed is: %d", cubed);
+
+
+
+
     }
+
+
 
 }
