@@ -3,19 +3,20 @@ import java.util.Arrays;
 public class PairedExercises {
     public static void main(String[] args) {
 
-        String tester = new String("1 2 3 4 5 6 7 10 -1");
+        String tester = "1 2 3 4 5 6 10 70 11 -1 -5 100";
 
         String[] ary = tester.split(" ");
         int[] ary2 = new int[ary.length];
         for (int i = 0; i < ary.length; i++) {
             ary2[i] = Integer.parseInt(ary[i]);
-
-            Arrays.sort(ary2);
-            System.out.println(ary2[ary2.length - 1] + " " + ary2[0]);
         }
+        Arrays.sort(ary2);
+        System.out.println(ary2[ary2.length - 1] + " " + ary2[0]);
 
         int[] numsTest = {1, 2, 4, 5, 6, 7, 9, 9, 9, 9};
         System.out.println(tripleUp(numsTest));
+
+        System.out.println(blackjack(12,22));
     }
 
 //   Array-2 > tripleUp
@@ -45,7 +46,7 @@ public class PairedExercises {
 //blackjack(21, 19) → 21
 //blackjack(19, 22) → 19
 
-    public int blackjack(int a, int b) {
+    public static int blackjack(int a, int b) {
         if(a > 21 && b > 21){
             return 0;
         }else if(a == 21 || b == 21){

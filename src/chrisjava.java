@@ -34,15 +34,15 @@ public class chrisjava {
         Scanner scanner = new Scanner(System.in);
 
 
-        int [] nums = {6, 7, 8, 9, 10};
-        System.out.println("removeOdds() = " + returnOdds(nums));
+        int [] nums = {7, 8, 9, 10, 11, 12, 13};
+        System.out.println("returnOdds() = " + returnOdds(nums));
 
 
         int [] test = {1, 2, 3, 4, 5};
-        System.out.println("countEvens(test) = " + countEvens(test));
+        System.out.println("countEvens() = " + countEvens(test));
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Input a Sentence: ");
+        System.out.print("Input a Sentence: \n");
         String line = input.nextLine();
         String upperCaseLine = "";
         Scanner lineScan = new Scanner(line);
